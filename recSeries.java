@@ -2,23 +2,23 @@
  * @author Koketso
  **/
 
-import java.util.*;
+import java.util.*;  
 
 public class recSeries{
-	public static void recSeries1(int a, int b, int n-1){
-		System.out.printf("%d ", n);
+	public static void recSeries1(int a, int b, int n){
+		System.out.printf("%d ", a + ((int)Math.pow(2, n))*b);
 		if (n == 0){
-			return a + (Math.pow(2, n)*b);
+			return;
 		}
 
-		 recSeries1(a,b,n)
+		 recSeries1(a,b,n);
 	}
 
 	
 	public static void main(String[] args){
-		try(Scanner input = new Scanner(System.in))
+		try(Scanner input = new Scanner(System.in)){
 
-			int q = input.nextINt();
+			int q = input.nextInt();
 
 			for (int i = 0; i < q; i++){
 				int a = input.nextInt();
@@ -27,5 +27,6 @@ public class recSeries{
 
 				recSeries1(a,b,n);
 			}
-	}	}
+	    }	
+    }
 }
