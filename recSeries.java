@@ -1,3 +1,7 @@
+/**
+ * @author Koketso
+ **/
+
 import java.util.*;
 
 public class recSeries{
