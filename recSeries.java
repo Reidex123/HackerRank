@@ -10,6 +10,7 @@ public class recSeries{
 		 recSeries1(a,b,n)
 	}
 
+	
 	public static void main(String[] args){
 		try(Scanner input = new Scanner(System.in))
 
