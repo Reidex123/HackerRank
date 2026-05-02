@@ -2,14 +2,15 @@ public class recSeries {
 
     public static void series(int a, int b, int n) {
 
-        int sum = 0;
+        int sum = a;
         for (int i = 0; i < n; i++) {
 
-            sum += (a + (int) Math.pow(2, i) * b);
+            sum += ((int) Math.pow(2, i) * b);
             System.out.print(sum + " ");
 
         }
 
+        System.out.println();
     }
     public static void main(String[] args){
 
