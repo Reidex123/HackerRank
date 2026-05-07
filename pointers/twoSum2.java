@@ -1,9 +1,8 @@
-// Implentation of the two sum problem using 2 pointers
-// Assuming the array is already sorted
-
+// Implentation of the two sum problem using HashSet
+// Also works on an unsorted array
 package pointers;
 
-public class twoSum {
+public class twoSum2 {
 
     public static void main(String[] args) {
 
@@ -29,22 +28,19 @@ public class twoSum {
     }
 
     private static boolean result(int target, int[] intArr) {
+        // more faster than using two pointers
 
-        int left = 0;
-        int right = intArr.length - 1;
+        java.util.Set<Integer> seen = new java.util.HashSet<>();
 
-        while (left < right) {
-            int sum = intArr[left] + intArr[right];
+        for (int num : intArr) {
 
-            if (sum == target) {
-                System.out.println("Values = " + intArr[left] + " and " + intArr[right]);
+            int complement = target - num;
+
+            if (seen.contains(complement)) {
                 return true;
             }
-            if (sum > target) {
-                right--;
-            } else {
-                left--;
-            }
+
+            seen.add(num);
         }
 
         return false;
