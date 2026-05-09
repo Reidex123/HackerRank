@@ -1,3 +1,4 @@
+package backTracking;
 
 public class subString {
 
@@ -11,7 +12,7 @@ public class subString {
         permute("", s, k);
         java.util.Collections.sort(permStrings);
 
-        return permStrings.get(0) + "\n" + permStrings.get(permStrings.size() - 1);
+        return permStrings.toString();
     }
 
     private static void permute(String prefix, String s, int k) {
