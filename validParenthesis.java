@@ -6,7 +6,7 @@ public class validParenthesis {
     static final Map<Character, Character> map = Map.ofEntries(
         entry(')', '('),
         entry(']', '['),
-        entry('')
+        entry('}', '{')
     );
     public static void main(String[] args) {
         System.out.println(valid("()[]{}")); // true
